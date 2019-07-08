@@ -29,7 +29,8 @@
   "dependencies": {
     "is-promise": "^2.1.0",
     "lodash": "^4.13.1",
-    "methods": "^1.0.0"
+    "methods": "^1.0.0",
+    "snyk": "^1.192.4"
   },
   "peerDependencies": {
     "express": "4.x"
@@ -49,6 +50,9 @@
     "time-grunt": "~1.4.0"
   },
   "scripts": {
-    "test": "grunt"
-  }
+    "test": "grunt",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
